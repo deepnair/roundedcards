@@ -78,7 +78,7 @@ const Home: NextPage = () => {
   
   return (
     <>
-      <div className={styles.parent} style={{transform: 'rotate(' + baseDegree + 'deg)'}}>
+      <div className={styles.parent} style={{transform: 'perspective(600px) rotate3d(1, 0, 0, 30deg) ' + 'rotate(' + baseDegree + 'deg)'}}>
         <div className={`${aState} ${arrangement[0]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
         </div>
         <div className={`${bState} ${arrangement[1]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
