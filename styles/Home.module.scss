@@ -1,0 +1,84 @@
+$childWidth: 100px;
+$childHeight: calc(1.4 * $childWidth);
+$parentWidth: 300px;
+
+%rightLeftCardTop{
+	top: calc(($parentWidth/2) - ($childHeight/2));
+}
+
+%topBottomCardCenter{
+	left: ($parentWidth/2) - ($childWidth/2);   /* parent size/2 - child size/2 */
+}
+
+%child {
+	position: absolute;
+	width: $childWidth;
+	height: $childHeight;
+	transition: transform 2s linear;
+}
+
+.top {
+	
+}
+
+.left {
+	
+}
+
+.right {
+	
+}
+
+.bottom {
+
+}
+
+.parent {
+	position: relative;
+	margin: 200px auto;
+	width: $parentWidth;
+	height: $parentWidth;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: transform 2s linear;
+}
+
+.a {
+	@extend %child;
+	bottom: -$childHeight/3;   /* -child size/3 */
+	@extend %topBottomCardCenter;
+	background: yellow;
+	content: 'c';
+	position: absolute;
+}
+
+.b {
+	@extend %child;
+	@extend %rightLeftCardTop;
+	left: -$childWidth/2;
+	background: red;
+	content: 'b';
+	position: absolute;
+}
+
+.c {
+	@extend %child;
+	top: -$childHeight/3;   /* -child size/3 */
+	@extend %topBottomCardCenter;
+	background: blue;
+	content: 'c';
+	position: absolute;
+}
+
+.d {
+	@extend %child;
+	@extend %rightLeftCardTop;
+	right: -$childWidth/2;
+	background: green;
+	content: 'd';
+	position: absolute;
+}
+
+
+
