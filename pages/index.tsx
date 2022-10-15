@@ -49,6 +49,9 @@ const Home: NextPage = () => {
   }
 
   const onPrevious = () => {
+
+    setBaseDegree(baseDegree-90)
+
     const newPlayerClass = playerClass.reduce((prev: string[], curr: string, index) => {
       if(index === 0){
         return prev
@@ -78,14 +81,18 @@ const Home: NextPage = () => {
   
   return (
     <>
-      <div className={styles.parent} style={{transform: 'perspective(600px) rotate3d(1, 0, 0, 30deg) ' + 'rotate(' + baseDegree + 'deg)'}}>
+      <div className={styles.parent} style={{transform: 'perspective(400px) rotate3d(1, 0, 0, 20deg) ' + 'rotate(' + baseDegree + 'deg)'}}>
         <div className={`${aState} ${arrangement[0]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
+          A
         </div>
         <div className={`${bState} ${arrangement[1]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
+          B
         </div>
         <div className={`${cState} ${arrangement[2]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
+          C
         </div>
         <div className={`${dState} ${arrangement[3]}`} style={{transform: 'rotate(-' + baseDegree + 'deg)'}}>
+          D
         </div>
       </div>
       <button onClick={onNext}>Turn</button>

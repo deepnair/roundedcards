@@ -18,19 +18,15 @@ $parentWidth: 300px;
 }
 
 .top {
-	
+	filter: blur(4px);
 }
 
 .left {
-	
+	filter: blur(2px);
 }
 
 .right {
-	
-}
-
-.bottom {
-
+	filter: blur(2px);
 }
 
 .parent {
@@ -38,8 +34,8 @@ $parentWidth: 300px;
 	margin: 200px auto;
 	width: $parentWidth;
 	height: $parentWidth;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 50%;
+	// border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 30%;
 	// transform: rotate3d(1, 0, 0, 45deg);
 	transition: transform 2s linear;
 }
@@ -49,7 +45,6 @@ $parentWidth: 300px;
 	bottom: -$childHeight/3;   /* -child size/3 */
 	@extend %topBottomCardCenter;
 	background: yellow;
-	content: 'c';
 	position: absolute;
 }
 
@@ -58,7 +53,6 @@ $parentWidth: 300px;
 	@extend %rightLeftCardTop;
 	left: -$childWidth/2;
 	background: red;
-	content: 'b';
 	position: absolute;
 }
 
@@ -67,7 +61,6 @@ $parentWidth: 300px;
 	top: -$childHeight/3;   /* -child size/3 */
 	@extend %topBottomCardCenter;
 	background: blue;
-	content: 'c';
 	position: absolute;
 }
 
@@ -76,7 +69,6 @@ $parentWidth: 300px;
 	@extend %rightLeftCardTop;
 	right: -$childWidth/2;
 	background: green;
-	content: 'd';
 	position: absolute;
 }
 
